@@ -26,7 +26,7 @@
       background-attachment: fixed;
       height: 100%;
       margin: 0;
-      animation: fadeIn 2.5s;
+      animation: fadeIn 3s;
     }
 
     @keyframes fadeIn {
@@ -56,15 +56,9 @@
         <p class="pt-4 text-base font-bold flex items-center justify-center lg:justify-start"><svg class="h-4 fill-current text-green-700 pr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
             <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm7.75-8a8.01 8.01 0 0 0 0-4h-3.82a28.81 28.81 0 0 1 0 4h3.82zm-.82 2h-3.22a14.44 14.44 0 0 1-.95 3.51A8.03 8.03 0 0 0 16.93 14zm-8.85-2h3.84a24.61 24.61 0 0 0 0-4H8.08a24.61 24.61 0 0 0 0 4zm.25 2c.41 2.4 1.13 4 1.67 4s1.26-1.6 1.67-4H8.33zm-6.08-2h3.82a28.81 28.81 0 0 1 0-4H2.25a8.01 8.01 0 0 0 0 4zm.82 2a8.03 8.03 0 0 0 4.17 3.51c-.42-.96-.74-2.16-.95-3.51H3.07zm13.86-8a8.03 8.03 0 0 0-4.17-3.51c.42.96.74 2.16.95 3.51h3.22zm-8.6 0h3.34c-.41-2.4-1.13-4-1.67-4S8.74 3.6 8.33 6zM3.07 6h3.22c.2-1.35.53-2.55.95-3.51A8.03 8.03 0 0 0 3.07 6z" />
           </svg> Dhaka, Bangladesh </p>
-        <p class="pt-8 text-sm">আমি মাহের হাসান, আমি একজন মাদ্রাসার ছাত্র, মানে আমি ধর্ম নিয়ে অনেক পড়াশোনা করি। কিন্তু যখন আমি পড়াশোনা করি না, তখন আমি বই (Novels) পড়ি অথবা অ্যানিমে দেখি</p>
+        <p class="pt-8 text-sm">If I had a nickel for everytime I gave a fuck about Palestine. I'd have none. I'm a pro hater.</p>
 
         <div class="mt-6 pb-16 lg:pb-0 w-4/5 lg:w-full mx-auto flex flex-wrap items-center justify-between">
-
-
-
-
-
-
           <a class="link" href="https://www.facebook.com/maher.env" data-tippy-content="@maher.env"><svg class="h-6 fill-current text-gray-600 hover:text-green-700" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <title>Facebook</title>
               <path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z" />
@@ -103,19 +97,6 @@
     </div>
     <div class="absolute top-0 right-0 h-12 w-18 p-4">
       <button class="js-change-theme focus:outline-none">
-        <svg id="dark-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon">
-          <path d="M21 12.79A9 9 0 0112.21 3 7.5 7.5 0 1012 21c4.42 0 8-3.58 8-8 0-.23-.01-.45-.03-.67A9.07 9.07 0 0021 12.79z"></path>
-        </svg>
-        <svg id="light-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun" style="display: none;">
-          <circle cx="12" cy="12" r="5"></circle>
-          <line x1="12" y1="1" x2="12" y2="3"></line>
-          <line x1="12" y1="21" x2="12" y2="23"></line>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-          <line x1="1" y1="12" x2="3" y2="12"></line>
-          <line x1="21" y1="12" x2="23" y2="12"></line>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
         </svg>
       </button>
     </div>
@@ -131,21 +112,15 @@
     const toggle = document.querySelector('.js-change-theme');
     const body = document.querySelector('body');
     const profile = document.getElementById('profile');
-    const darkIcon = document.getElementById('dark-icon');
-    const lightIcon = document.getElementById('light-icon');
 
     body.classList.replace('text-gray-900', 'text-gray-100');
     profile.classList.replace('bg-white', 'bg-gray-900');
 
     toggle.addEventListener('click', () => {
       if (body.classList.contains('text-gray-100')) {
-        darkIcon.style.display = "none";
-        lightIcon.style.display = "inline";
         body.classList.replace('text-gray-100', 'text-gray-900');
         profile.classList.replace('bg-gray-900', 'bg-white');
       } else {
-        lightIcon.style.display = "none";
-        darkIcon.style.display = "inline";
         body.classList.replace('text-gray-900', 'text-gray-100');
         profile.classList.replace('bg-white', 'bg-gray-900');
       }
