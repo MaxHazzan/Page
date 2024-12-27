@@ -19,14 +19,17 @@
     }
 
     body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
       background-image: url('assets/gb.jpg');
       background-size: cover;
-      transition: all 1s;
       background-position: center;
       background-repeat: no-repeat;
       background-attachment: fixed;
-      height: 100%;
-      margin: 0;
+      transition: all 1s;
       animation: fadeIn 3s;
     }
 
@@ -47,6 +50,18 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       animation: gradient 5s ease infinite;
+    }
+
+    .toBoldBlog {
+      font-weight: bolder;
+      text-decoration: none;
+      color: #0073e6;
+      transition: color 0.3s ease;
+    }
+
+    .toBoldBlog:hover {
+      color: #005bb5;
+      text-decoration: underline;
     }
 
     @keyframes gradient {
@@ -70,6 +85,21 @@
         background-position: 0% 50%;
       }
     }
+
+
+    @media (min-width: 768px) {
+      html {
+        max-width: 100rem;
+        height: 100rem;
+        opacity: 1;
+        margin: auto;
+      }
+      body {
+      border: 1px solid black;
+      background-image: url('assets/gb_pc.jpg');
+      opacity: 1;
+      }
+    }
   </style>
 </head>
 
@@ -77,10 +107,8 @@
   <div class="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0 animate__animated animate__fadeIn">
     <div id="profile" class="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-white opacity-75 mx-6 lg:mx-0 transition ease-in-out duration-500 transform">
 
-      <div class="p-4 md:p-12 text-center lg:text-left">
+      <div class="p-4 md:p-12 text-center lg:text-left blockofinfo" id="blockofinfo">
         <div class="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center" style="background-image: url('https://graph.facebook.com/100092177763774/picture?width=512&height=512&access_token=6628568379|c1e620fa708a1d5696fb991c1bde5662')"></div>
-        <!-- FB GraphQL for synchronized profile images -->
-
         <h1 class="text-3xl font-bold pt-8 lg:pt-0">Maher Hassan</h1>
         <div class="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-green-500 opacity-25"></div>
         <p class="pt-4 text-base font-bold flex items-center justify-center lg:justify-start"><svg class="h-4 fill-current text-green-700 pr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -90,6 +118,7 @@
             <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm7.75-8a8.01 8.01 0 0 0 0-4h-3.82a28.81 28.81 0 0 1 0 4h3.82zm-.82 2h-3.22a14.44 14.44 0 0 1-.95 3.51A8.03 8.03 0 0 0 16.93 14zm-8.85-2h3.84a24.61 24.61 0 0 0 0-4H8.08a24.61 24.61 0 0 0 0 4zm.25 2c.41 2.4 1.13 4 1.67 4s1.26-1.6 1.67-4H8.33zm-6.08-2h3.82a28.81 28.81 0 0 1 0-4H2.25a8.01 8.01 0 0 0 0 4zm.82 2a8.03 8.03 0 0 0 4.17 3.51c-.42-.96-.74-2.16-.95-3.51H3.07zm13.86-8a8.03 8.03 0 0 0-4.17-3.51c.42.96.74 2.16.95 3.51h3.22zm-8.6 0h3.34c-.41-2.4-1.13-4-1.67-4S8.74 3.6 8.33 6zM3.07 6h3.22c.2-1.35.53-2.55.95-3.51A8.03 8.03 0 0 0 3.07 6z" />
           </svg> Dhaka, Bangladesh </p>
         <p class="pt-8 text-sm">Hi, I'm Maher, and I like reading <span class="toBold">Manga</span> and watching Anime<br>I'm an avid <span class="toBold">Manga reader</span><br>Frankly, I prefer <span class="toBold">Manga</span> over Anime</p>
+        <p class="pt-8 text-sm toBoldBlog"><a href="/blog">Blog Page</a></p>
         <div class="mt-6 pb-16 lg:pb-0 w-4/5 lg:w-full mx-auto flex flex-wrap items-center justify-between">
           <a class="link" href="https://www.facebook.com/maher.env" data-tippy-content="@maher.env"><svg class="h-6 fill-current text-gray-600 hover:text-green-700" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <title>Facebook</title>
@@ -159,6 +188,7 @@
       body.style.transition = "color 0.5s ease";
       profile.style.transition = "background-color 0.5s ease";
     });
+
   </script>
 </body>
 
